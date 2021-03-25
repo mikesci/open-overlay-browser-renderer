@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style type="text/css">
+    html, body { overflow: hidden; height: 100%; width: 100%; padding: 0; margin: 0; overflow: hidden; background: #000; }
+    openoverlay-stage { width: 90vw; height: 90vh; margin: 5vh 0 0 5vw; overflow: hidden; background: #444; }
+    openoverlay-stage openoverlay-overlay { background: #ffffff20; }
+    </style>
+
+    <script src="/index.js" type="module"></script>
+</head>
+<body>
+    <openoverlay-stage>
+        <openoverlay-renderer></openoverlay-renderer>
+    </openoverlay-stage>
+        
+    <script>
+        const renderer = document.querySelector("openoverlay-renderer");
+        fetch("test/overlaysimple.json").then(r => r.json()).then(overlayJson => {
+            renderer.overlays = [overlayJson];
+        });
+        window.switch = () => {
+            fetch("test/overlay.json").then(r => r.json()).then(overlayJson => {
+                renderer.overlays = [overlayJson];
+            });
+        };
+    </script>
+
+</body>
+</html>

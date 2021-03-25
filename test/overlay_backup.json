@@ -1,0 +1,197 @@
+{
+    "id": "new-overlay-2",
+    "name": "New Overlay 2",
+    "layers": [
+      {
+        "id": 7,
+        "elementName": "text",
+        "label": "Text",
+        "config": {
+          "text": "text"
+        },
+        "effects": null,
+        "style": {
+          "top": "400.62059238363895px",
+          "left": "1188.1523272214388px",
+          "width": "399.9999999999999px",
+          "height": "150.18335684062052px",
+          "fontFamily": "Graduate",
+          "fontSize": "109px",
+          "color": "rgba(255,0,0,1)",
+          "whiteSpace": "pre",
+          "letterSpacing": "0px",
+          "justifyContent": "flex-end",
+          "textAlign": "right",
+          "alignItems": "center"
+        },
+        "transitions": {
+          "custom-in": {
+            "delay": 0,
+            "duration": 1860,
+            "easing": "ease-out",
+            "transform": "perspective(1000px) translate3d(0px, 0px, 1000px) rotate3d(1, 0, 0, -77deg) rotate3d(0, 1, 0, -84deg) rotate(0deg) scale(1, 1)"
+          },
+          "slide-out": {
+            "delay": 210,
+            "duration": 1200,
+            "easing": "ease-in",
+            "angle": 90,
+            "distance": 2000
+          }
+        }
+      },
+      {
+        "id": 5,
+        "elementName": "rectangle",
+        "label": "red",
+        "config": {},
+        "effects": null,
+        "style": {
+          "top": "270.73909028571444px",
+          "left": "160.3406262857144px",
+          "width": "419.55838413309453px",
+          "height": "339.8434780834828px",
+          "backgroundColor": "#FF0000"
+        },
+        "transitions": {
+          "transform-in": {
+            "delay": 0,
+            "duration": 1190,
+            "easing": "cubic-bezier(0.50, -0.5, 0.5, 1.5)",
+            "fromRotation": 315,
+            "fromScale": 0
+          },
+          "fade-in": {
+            "delay": 0,
+            "duration": 1820,
+            "easing": "linear",
+            "fromOpacity": 0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "elementName": "rectangle",
+        "label": "blue",
+        "config": {},
+        "effects": null,
+        "style": {
+          "top": "505.0699702906597px",
+          "left": "272.6958140525742px",
+          "width": "346.85796851924425px",
+          "height": "332.284417438162px",
+          "backgroundColor": "#0014ffff"
+        },
+        "transitions": {
+          "transform-in": {
+            "delay": 0,
+            "duration": 1190,
+            "easing": "cubic-bezier(0.50, -0.5, 0.5, 1.5)",
+            "fromRotation": 315,
+            "fromScale": 0
+          },
+          "slide-in": {
+            "delay": 0,
+            "duration": 1450,
+            "easing": "ease-out",
+            "angle": 90,
+            "distance": 2000
+          }
+        }
+      },
+      {
+        "id": 3,
+        "elementName": "rectangle",
+        "label": "green",
+        "config": {},
+        "effects": null,
+        "style": {
+          "top": "530.4871245539714px",
+          "left": "472.26613118015797px",
+          "width": "342.8182791082605px",
+          "height": "315.51157383563896px",
+          "backgroundColor": "#0aff00ff"
+        },
+        "transitions": {
+          "transform-in": {
+            "delay": 0,
+            "duration": 1190,
+            "easing": "cubic-bezier(0.50, -0.5, 0.5, 1.5)",
+            "fromRotation": 315,
+            "fromScale": 0
+          },
+          "fade-out": {
+            "delay": 0,
+            "duration": 500,
+            "easing": "linear",
+            "toOpacity": 0
+          },
+          "custom-in": {
+            "delay": 0,
+            "duration": 2150,
+            "easing": "linear",
+            "borderWidth": "58px",
+            "borderStyle": "solid",
+            "borderColor": "#ffffffff",
+            "borderTopLeftRadius": "0px",
+            "borderTopRightRadius": "0px",
+            "borderBottomRightRadius": "0px",
+            "borderBottomLeftRadius": "0px"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "elementName": "rectangle",
+        "label": "purp",
+        "config": {},
+        "effects": null,
+        "style": {
+          "top": "291.3623399056914px",
+          "left": "553.3795695235732px",
+          "width": "340.2488398270761px",
+          "height": "370.07972066476583px",
+          "backgroundColor": "#9100ffff"
+        },
+        "transitions": {
+          "transform-in": {
+            "delay": 0,
+            "duration": 1190,
+            "easing": "cubic-bezier(0.50, -0.5, 0.5, 1.5)",
+            "fromRotation": 315,
+            "fromScale": 0
+          },
+          "custom-in": {
+            "delay": 0,
+            "duration": 500,
+            "easing": "linear",
+            "backgroundColor": "#ff0000ff"
+          }
+        }
+      },
+      {
+        "id": 6,
+        "elementName": "rectangle",
+        "label": "white",
+        "config": {},
+        "effects": null,
+        "style": {
+          "top": "159.78389610389604px",
+          "left": "107.7194805194805px",
+          "width": "869.8015584415583px",
+          "height": "720.8602597402596px",
+          "backgroundColor": "#ffffffff"
+        },
+        "hidden": true
+      }
+    ],
+    "scripts": {
+      "main.js": "console.log(\"executed script\");\nlayer(\"Text\").hide();",
+      "settings.json": "{\n  \"info\": \"This is the scripts's info/instructions, configurable in Scripts -> settings.json.\",\n  \"initial\": { \"amount\": 25 },\n  \"parameters\": [\n    { \"name\": \"amount\", \"type\": \"slider\", \"displayName\": \"Amount\", \"inline\": true }\n  ]\n}",
+      "example.js": "class Example {\n  test() {\n    console.log(\"TEST\");\n  }\n};\n\nexport default Example;"
+    },
+    "settings": {
+      "amount": 20
+    },
+    "assets": {}
+  }

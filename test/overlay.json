@@ -1,0 +1,172 @@
+{
+    "id": "new-overlay-2",
+    "name": "New Overlay 2",
+    "layers": [
+      {
+        "id": 7,
+        "elementName": "text",
+        "label": "Text",
+        "text": "Example Text",
+        "top": 400,
+        "left": 1200,
+        "width": 400,
+        "height": 150,
+        "font": "Graduate",
+        "fontSrc": "https://fonts.googleapis.com/css?family=Graduate",
+        "fontSize": 109,
+        "color": "rgba(255,0,0,1)",
+        "letterSpacing": 0,
+        "wrap": false,
+        "hAlign": "center",
+        "vAlign": "center",
+        "transitions": {
+          "custom-in": {
+            "delay": 0,
+            "duration": 1860,
+            "easing": "ease-out",
+            "transform": "perspective(1000px) translate3d(0px, 0px, 1000px) rotate3d(1, 0, 0, -77deg) rotate3d(0, 1, 0, -84deg) rotate(0deg) scale(1, 1)"
+          },
+          "slide-out": {
+            "delay": 210,
+            "duration": 1200,
+            "easing": "ease-in",
+            "angle": 90,
+            "distance": 2000
+          }
+        }
+      },
+      {
+        "id": 5,
+        "elementName": "rectangle",
+        "label": "red",
+        "top": 270,
+        "left": 160,
+        "width": 420,
+        "height": 440,
+        "backgroundColor": "#FF0000",
+        "transitions": {
+          "transform-in": {
+            "delay": 0,
+            "duration": 1190,
+            "easing": "cubic-bezier(0.50, -0.5, 0.5, 1.5)",
+            "fromRotation": 315,
+            "fromScale": 0
+          },
+          "fade-in": {
+            "delay": 0,
+            "duration": 1820,
+            "easing": "linear",
+            "fromOpacity": 0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "elementName": "rectangle",
+        "label": "blue",
+        "top": 505,
+        "left": 275,
+        "width": 345,
+        "height": 330,
+        "backgroundColor": "#0014ffff",
+        "transitions": {
+          "transform-in": {
+            "delay": 0,
+            "duration": 1190,
+            "easing": "cubic-bezier(0.50, -0.5, 0.5, 1.5)",
+            "fromRotation": 315,
+            "fromScale": 0
+          },
+          "slide-in": {
+            "delay": 0,
+            "duration": 1450,
+            "easing": "ease-out",
+            "angle": 90,
+            "distance": 2000
+          }
+        }
+      },
+      {
+        "id": 3,
+        "elementName": "rectangle",
+        "label": "green",
+        "top": 530,
+        "left": 475,
+        "width": 340,
+        "height": 315,
+        "backgroundColor": "#0aff00ff",
+        "transitions": {
+          "transform-in": {
+            "delay": 0,
+            "duration": 1190,
+            "easing": "cubic-bezier(0.50, -0.5, 0.5, 1.5)",
+            "fromRotation": 315,
+            "fromScale": 0
+          },
+          "fade-out": {
+            "delay": 0,
+            "duration": 500,
+            "easing": "linear",
+            "toOpacity": 0
+          },
+          "custom-in": {
+            "delay": 0,
+            "duration": 2150,
+            "easing": "linear",
+            "borderWidth": "58px",
+            "borderStyle": "solid",
+            "borderColor": "#ffffffff",
+            "borderTopLeftRadius": "0px",
+            "borderTopRightRadius": "0px",
+            "borderBottomRightRadius": "0px",
+            "borderBottomLeftRadius": "0px"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "elementName": "rectangle",
+        "label": "purp",
+        "top": 300,
+        "left": 550,
+        "width": 340,
+        "height": 370,
+        "backgroundColor": "#9100ffff",
+        "transitions": {
+          "transform-in": {
+            "delay": 0,
+            "duration": 1190,
+            "easing": "cubic-bezier(0.50, -0.5, 0.5, 1.5)",
+            "fromRotation": 315,
+            "fromScale": 0
+          },
+          "custom-in": {
+            "delay": 0,
+            "duration": 500,
+            "easing": "linear",
+            "backgroundColor": "#ff0000ff"
+          }
+        }
+      },
+      {
+        "id": 6,
+        "elementName": "rectangle",
+        "label": "white",
+        "top": 160,
+        "left": 110,
+        "width": 870,
+        "height": 720,
+        "backgroundColor": "#ffffffff",
+        "hidden": true
+      }
+    ],
+    "scripts": {
+      "main.js": "console.log(\"executed script\");\nlayer(\"Text\").hide();",
+      "settings.json": "{\n  \"info\": \"This is the scripts's info/instructions, configurable in Scripts -> settings.json.\",\n  \"initial\": { \"amount\": 25 },\n  \"parameters\": [\n    { \"name\": \"amount\", \"type\": \"slider\", \"displayName\": \"Amount\", \"inline\": true }\n  ]\n}",
+      "example.js": "class Example {\n  test() {\n    console.log(\"TEST\");\n  }\n};\n\nexport default Example;"
+    },
+    "settings": {
+      "amount": 20
+    },
+    "assets": {}
+  }

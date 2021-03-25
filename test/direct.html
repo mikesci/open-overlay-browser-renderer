@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style type="text/css">
+    html, body { overflow: hidden; height: 100%; width: 100%; padding: 0; margin: 0; overflow: hidden; background: #000; }
+    openoverlay-stage { width: 90vw; height: 90vh; margin: 5vh 0 0 5vw; overflow: hidden; background: #444; }
+    openoverlay-stage openoverlay-overlay { background: #ffffff20; }
+    </style>
+
+    <script src="../index.js" type="module"></script>
+</head>
+<body>
+    <openoverlay-stage>
+        <openoverlay-overlay>
+            <openoverlay-text name="Text" text="example"  style="top:275px;left:760px;width:400px;height:400px;border:10px solid #00FF00;font-family:Diplomata;font-size:40px;"></openoverlay-text>
+            <openoverlay-image name="Image 1" src="#image2-png" style="top:475px;left:100px;width:400px;height:400px;"></openoverlay-image>
+            <openoverlay-rectangle name="Rect 1" style="top:10px;left:10px;width:100px;height:200px;background:red;"></openoverlay-rectangle>
+            <openoverlay-video name="Video 1" autoplay="false" src="https://www.youtube.com/watch?v=KF32DRg9opA" style="top:150px;left:150px;width:480px;height:360px;"></openoverlay-video>
+            <openoverlay-video name="Video 2" src="#creed-burrito" style="top:500px;left:500px;width:480px;height:360px;"></openoverlay-video>
+            <openoverlay-iframe name="IFrame 1" src="https://tunein.com/embed/player/s291105/" style="top:500px;left:800px;width:480px;height:360px;"></openoverlay-iframe>
+        </openoverlay-overlay>
+    </openoverlay-stage>
+
+    <script>
+
+        let overlay = document.querySelector("openoverlay-overlay");
+        overlay.addEventListener("load", () => {
+            console.log("overlay loaded!");
+        });
+
+        // programmatic asset control
+        overlay.assets = [{
+            id: "image2-png", 
+            type: "image",
+            src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE1NC40MiAxNzcuMDciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQ0LjEyMSAtNS4xMTM5KSI+PHBhdGggZD0ibTE5NC41NCAxMzUuOTItNzMuMjA5IDQyLjI2Ny03My4yMDktNDIuMjY3di04NC41MzVsNzMuMjA5LTQyLjI2NyA3My4yMDkgNDIuMjY3eiIgZmlsbD0iIzAyMWY0MCIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iOCIvPjwvZz48L3N2Zz4NCg=="
+        },
+        {
+            id: "creed-burrito", 
+            type: "video",
+            src: "creed-burrito.mp4"
+        }];
+
+        /*
+        document.querySelector("[name='Video 2']").animate([
+            { transform: "perspective(1000px)" },
+            { transform: "perspective(1000px) rotateY(360deg)" },
+        ], {
+            duration: 3000,
+            iterations: 500,
+            easing: "linear"
+        });
+        */
+
+        (function() {
+            const overlay = "...";
+        });
+    </script>
+    
+</body>
+</html>
